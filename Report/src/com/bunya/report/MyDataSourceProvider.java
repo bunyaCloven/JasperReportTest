@@ -9,6 +9,9 @@ import net.sf.jasperreports.engine.base.JRBaseField;
 
 public class MyDataSourceProvider implements JRDataSourceProvider {
 
+	/**
+	 * Sample field implementation for MyDataSource
+	 */
 	private class MyField extends JRBaseField {
 		private static final long serialVersionUID = 9100993853951205670L;
 
@@ -43,6 +46,7 @@ public class MyDataSourceProvider implements JRDataSourceProvider {
 
 	@Override
 	public void dispose(JRDataSource dataSource) throws JRException {
+
 	}
 
 	@Override

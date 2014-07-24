@@ -11,9 +11,9 @@ import net.sf.jasperreports.engine.JRField;
 public class MyDataSource implements JRDataSource {
 
 	private class MyDataStructure {
-		String alpha;
-		String beta;
-		String delta;
+		private String alpha;
+		private String beta;
+		private String delta;
 
 		MyDataStructure(String alpha, String beta, String delta) {
 			this.alpha = alpha;
@@ -41,7 +41,6 @@ public class MyDataSource implements JRDataSource {
 	public boolean next() throws JRException {
 		Boolean value = it.hasNext();
 		currentData = (value) ? it.next() : currentData;
-		System.out.println(value + ": " + currentData);
 		return value;
 	}
 
